@@ -1,170 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Velvet Strand Studio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenofon Tsimpogiannis | Digital Growth Strategist</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header class="hero">
-      <nav class="nav">
-        <div class="logo">Velvet Strand</div>
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#stylists">Stylists</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Book</a>
+    <canvas id="mesh-bg"></canvas>
+    <div class="background-glow">
+      <div class="glow-orb glow-1"></div>
+      <div class="glow-orb glow-2"></div>
+    </div>
+    <!-- NAV -->
+    <header class="main-header">
+      <div class="container nav-container">
+        <div class="logo">
+          <span style="color:#fff;">X</span>T
         </div>
-        <button class="nav-cta">Book Now</button>
-      </nav>
-
-      <section class="hero-content">
-        <p class="eyebrow">Modern hair studio</p>
-        <h1>Elevate your signature style with artistry and care.</h1>
-        <p class="hero-subtext">
-          A curated salon experience focused on healthy hair, precision cuts, and luminous color. Relax in a
-          light-filled studio designed for calm, confidence, and transformation.
-        </p>
-        <div class="hero-actions">
-          <button class="primary">Schedule a consult</button>
-          <button class="secondary">View services</button>
+        <nav class="nav-links">
+          <a href="#manifesto">Manifesto</a>
+          <a href="#impact">Impact</a>
+          <a href="#framework">Framework</a>
+          <a href="#work">Work</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#thought-leadership">Insights</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="hero-highlights">
-          <div>
-            <span class="stat">12+</span>
-            <p>Years of artistry</p>
-          </div>
-          <div>
-            <span class="stat">4.9</span>
-            <p>Average client rating</p>
-          </div>
-          <div>
-            <span class="stat">Eco</span>
-            <p>Conscious products</p>
-          </div>
-        </div>
-      </section>
+      </div>
     </header>
-
-    <main>
-      <section id="services" class="section services">
-        <div class="section-heading">
-          <h2>Signature services</h2>
-          <p>Tailored sessions built around your hair goals, lifestyle, and maintenance routine.</p>
+    <!-- HERO -->
+    <section class="section" style="padding-top:220px; text-align:center;">
+      <div class="container">
+        <div class="small-label">Digital Growth Strategist</div>
+        <h1> Xenofon <br>
+          <span style="
+        background: linear-gradient(90deg,#00e0c6,#0ea5e9);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;"> Tsimpogiannis </span>
+        </h1>
+        <p style="max-width:720px;margin:28px auto 0;"> Designing scalable organic growth systems. </p>
+        <div style="margin-top:38px;">
+          <span class="pill">SEO Architecture</span>
+          <span class="pill">Content Systems</span>
+          <span class="pill">Data Intelligence</span>
+          <span class="pill">AI Workflows</span>
         </div>
-        <div class="service-grid">
-          <article>
-            <h3>Precision Cut</h3>
-            <p>Custom shape, texture mapping, and a styling lesson to keep your look effortless.</p>
-          </article>
-          <article>
-            <h3>Lived-in Color</h3>
-            <p>Multi-dimensional color, low-maintenance grow-out, and glossing for radiant shine.</p>
-          </article>
-          <article>
-            <h3>Silk Press & Care</h3>
-            <p>Nourishing hydration therapy paired with sleek styling and heat protection.</p>
-          </article>
-          <article>
-            <h3>Event Styling</h3>
-            <p>Bridal, editorial, and celebration styling with on-site options available.</p>
-          </article>
+        <div style="margin-top:48px;">
+          <button class="btn-primary" onclick="location.href='#manifesto';">Explore My Work</button>
+          <button class="btn-outline" onclick="location.href='https://www.linkedin.com/in/xtsimpogiannis/';">View My CV</button>
         </div>
-      </section>
-
-      <section id="stylists" class="section stylists">
-        <div class="section-heading">
-          <h2>Meet the team</h2>
-          <p>Stylists who specialize in texture, color artistry, and intentional care.</p>
-        </div>
-        <div class="stylist-grid">
-          <article class="stylist-card">
-            <div class="avatar">AL</div>
-            <div>
-              <h3>Ava Laurent</h3>
-              <p>Color + blonding specialist known for luminous, dimensional finishes.</p>
+      </div>
+    </section>
+    <!-- STRATEGIC MANIFESTO -->
+    <section class="section manifesto-section" id="manifesto">
+      <div class="container manifesto-container">
+        <div class="small-label">Philosophy</div>
+        <h2 class="section-title">Strategic Manifesto</h2>
+        <div class="manifesto-rows">
+		<div class="manifesto-content">
+          <div class="manifesto-item">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
             </div>
-          </article>
-          <article class="stylist-card">
-            <div class="avatar">MJ</div>
-            <div>
-              <h3>Marcus Jin</h3>
-              <p>Precision cutting expert focused on movement and effortless styling.</p>
-            </div>
-          </article>
-          <article class="stylist-card">
-            <div class="avatar">SR</div>
-            <div>
-              <h3>Solene Reyes</h3>
-              <p>Texture specialist creating healthy curls and silk press transformations.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="gallery" class="section gallery">
-        <div class="section-heading">
-          <h2>Studio moments</h2>
-          <p>Clean lines, warm light, and looks that feel like you.</p>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-card">
-            <h3>Gloss & glow</h3>
-            <p>Lowlights, soft layers, and an ultra-hydrating ritual.</p>
-          </div>
-          <div class="gallery-card highlight">
-            <h3>Modern fringe</h3>
-            <p>Face-framing texture with airy movement.</p>
-          </div>
-          <div class="gallery-card">
-            <h3>Silk press</h3>
-            <p>Healthy shine and effortless polish.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="contact-card">
-          <div>
-            <h2>Book your appointment</h2>
-            <p>
-              Consults are available Tuesday through Saturday. Let us know your goals and we will match you with the
-              right stylist.
-            </p>
-            <div class="contact-details">
-              <p>hello@velvetstrand.studio</p>
-              <p>(212) 555-0194</p>
-              <p>178 Mercer Street, Suite 4B · New York</p>
+            <div class="manifesto-text">
+              <h3>Structure Before Scale</h3>
+              <p> Sustainable growth is not driven by volume. It is driven by architecture. Without structural clarity, scale amplifies inefficiency. True expansion begins with intentional design. </p>
             </div>
           </div>
-          <form class="contact-form">
-            <label>
-              Your name
-              <input type="text" name="name" placeholder="Full name" />
-            </label>
-            <label>
-              Desired service
-              <input type="text" name="service" placeholder="Cut, color, or style" />
-            </label>
-            <label>
-              Preferred date
-              <input type="text" name="date" placeholder="e.g. June 24" />
-            </label>
-            <button type="submit">Request booking</button>
-          </form>
+          <div class="manifesto-item">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
+            </div>
+            <div class="manifesto-text">
+              <h3>Systems Over Tactics</h3>
+              <p> Tactical wins are temporary. Systems compound. When execution is embedded into repeatable frameworks, performance becomes predictable and measurable across lifecycle stages. </p>
+            </div>
+          </div>
+          <div class="manifesto-item manifesto-item-last">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
+            </div>
+            <div class="manifesto-text">
+              <h3>Intelligence as Leverage</h3>
+              <p> Data and AI are not shortcuts, they are multipliers. When embedded within structured processes, they create exponential execution velocity without sacrificing precision. </p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>© 2024 Velvet Strand Studio. Modern hair artistry.</p>
+        <div class="manifesto-content">
+          <div class="manifesto-item">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
+            </div>
+            <div class="manifesto-text">
+              <h3>Velocity Through Alignment</h3>
+              <p> Speed without alignment creates noise. When product, marketing, data, and revenue operate under a unified strategic direction, momentum becomes coordinated force rather than fragmented motion. </p>
+            </div>
+          </div>
+          <div class="manifesto-item">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
+            </div>
+            <div class="manifesto-text">
+              <h3>Execution Defines Strategy</h3>
+              <p> A strategy untested in execution is theory. Real strategy is validated in the field, through iteration, measurement, and disciplined refinement. Clarity emerges from action, not abstraction. </p>
+            </div>
+          </div>
+          <div class="manifesto-item manifesto-item-last">
+            <div class="manifesto-marker">
+              <div class="manifesto-dot"></div>
+            </div>
+            <div class="manifesto-text">
+              <h3>Compounding Over Campaigns</h3>
+              <p> Short-term campaigns create spikes. Compounding mechanisms create durable advantage. Sustainable growth is engineered through feedback loops that continuously optimize acquisition, retention, and value creation. </p>
+            </div>
+          </div>
+        </div>
+		</div>
+      </div>
+    </section>
+    <!-- MEASURED IMPACT -->
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="small-label center">Track Record</div>
+        <h2 class="section-title">Measured Impact</h2>
+        <div class="metrics">
+          <div class="glass metric">
+            <h2>15+</h2>
+            <div class="metric-title">Years Digital Strategy</div>
+            <div class="metric-sub">Enterprise & high-growth environments</div>
+          </div>
+          <div class="glass metric">
+            <h2>30K</h2>
+            <div class="metric-title">Leads / Month</div>
+            <div class="metric-sub">Organic acquisition systems</div>
+          </div>
+          <div class="glass metric">
+            <h2>+15%</h2>
+            <div class="metric-title">Organic Growth YoY</div>
+            <div class="metric-sub">Sustained multi-year improvement</div>
+          </div>
+          <div class="glass metric">
+            <h2>1K+</h2>
+            <div class="metric-title">Projects Delivered</div>
+            <div class="metric-sub">SEO, content & automation initiatives</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- GROWTH FRAMEWORK -->
+    <section class="section" id="framework">
+      <div class="container">
+        <div class="small-label center">Methodology</div>
+        <h2 class="section-title">The Growth Framework</h2>
+        <div class="framework-grid">
+          <!-- CARD 1 -->
+          <div class="framework-card glass">
+            <div class="framework-header">
+              <div class="framework-icon">🔍</div>
+              <div>
+                <div class="framework-small">Phase 01</div>
+                <div class="framework-title">Audit & Diagnosis</div>
+              </div>
+            </div>
+            <p> Comprehensive evaluation of performance gaps, structural limitations, and untapped demand opportunities. </p>
+            <ul>
+              <li>Technical SEO assessment</li>
+              <li>Content architecture mapping</li>
+              <li>Competitive intelligence</li>
+              <li>Conversion bottleneck analysis</li>
+            </ul>
+          </div>
+          <!-- CARD 2 -->
+          <div class="framework-card glass">
+            <div class="framework-header">
+              <div class="framework-icon">🏗</div>
+              <div>
+                <div class="framework-small">Phase 02</div>
+                <div class="framework-title">System Design</div>
+              </div>
+            </div>
+            <p> Build scalable growth systems aligned with search demand, lifecycle stages, and operational capacity. </p>
+            <ul>
+              <li>SEO architecture design</li>
+              <li>Taxonomy modeling</li>
+              <li>Workflow engineering</li>
+              <li>KPI framework creation</li>
+            </ul>
+          </div>
+          <!-- CARD 3 -->
+          <div class="framework-card glass">
+            <div class="framework-header">
+              <div class="framework-icon">⚙️</div>
+              <div>
+                <div class="framework-small">Phase 03</div>
+                <div class="framework-title">Execution Alignment</div>
+              </div>
+            </div>
+            <p> Align teams, processes, and production systems to ensure consistent and measurable growth execution. </p>
+            <ul>
+              <li>Editorial velocity planning</li>
+              <li>CRM integration</li>
+              <li>AI workflow deployment</li>
+              <li>Internal enablement systems</li>
+            </ul>
+          </div>
+          <!-- CARD 4 -->
+          <div class="framework-card glass">
+            <div class="framework-header">
+              <div class="framework-icon">📈</div>
+              <div>
+                <div class="framework-small">Phase 04</div>
+                <div class="framework-title">Optimization & Compounding</div>
+              </div>
+            </div>
+            <p> Continuous iteration loops to maximize ROI and transform short-term wins into durable growth assets. </p>
+            <ul>
+              <li>Data-driven experimentation</li>
+              <li>Performance dashboards</li>
+              <li>Forecast modeling</li>
+              <li>Compound scaling strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ENTERPRISE WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="small-label center">Portfolio</div>
+        <h2 class="section-title">Selected Enterprise Work</h2>
+        <div class="enterprise-grid">
+          <!-- CARD 1 -->
+          <div class="enterprise-card glass">
+            <div class="enterprise-header">
+              <div class="enterprise-icon">🚗</div>
+              <div class="enterprise-title-wrap">
+                <div class="enterprise-title-row">
+                  <h3>Autohellas Hertz</h3>
+                  <span class="enterprise-tag">Mobility</span>
+                </div>
+                <p class="enterprise-description"> Demand modeling and international SEO optimization for multi-location rental operations. </p>
+                <ul class="enterprise-list">
+                  <li>International SEO</li>
+                  <li>Location optimization</li>
+                  <li>Lifecycle automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		  <!-- CARD 2 -->
+          <div class="enterprise-card glass">
+            <div class="enterprise-header">
+              <div class="enterprise-icon">📡</div>
+              <div class="enterprise-title-wrap">
+                <div class="enterprise-title-row">
+                  <h3>Nova Telecommunications</h3>
+                  <span class="enterprise-tag">Telecom</span>
+                </div>
+                <p class="enterprise-description"> Enterprise-scale SEO restructuring across product, support, and content properties. </p>
+                <ul class="enterprise-list">
+                  <li>Technical SEO overhaul</li>
+                  <li>Taxonomy redesign</li>
+                  <li>Conversion alignment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 3 -->
+          <div class="enterprise-card glass">
+            <div class="enterprise-header">
+              <div class="enterprise-icon">🛒</div>
+              <div class="enterprise-title-wrap">
+                <div class="enterprise-title-row">
+                  <h3>MediaMarkt</h3>
+                  <span class="enterprise-tag">Retail</span>
+                </div>
+                <p class="enterprise-description"> Large-scale category expansion and demand capture framework for consumer electronics. </p>
+                <ul class="enterprise-list">
+                  <li>Category scaling</li>
+                  <li>Content velocity system</li>
+                  <li>Internal linking optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 4 -->
+          <div class="enterprise-card glass">
+            <div class="enterprise-header">
+              <div class="enterprise-icon">💻</div>
+              <div class="enterprise-title-wrap">
+                <div class="enterprise-title-row">
+                  <h3>Plaisio</h3>
+                  <span class="enterprise-tag">E-commerce</span>
+                </div>
+                <p class="enterprise-description"> SEO infrastructure redesign and performance compounding strategy across product verticals. </p>
+                <ul class="enterprise-list">
+                  <li>SEO re-architecture</li>
+                  <li>Demand forecasting</li>
+                  <li>Content automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CORE CAPABILITIES -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="small-label center">Expertise</div>
+        <h2 class="section-title">Core Capabilities</h2>
+        <p class="section-subtext center"> Structured systems across strategy, execution, and automation designed to create sustainable organic growth engines. </p>
+        <div class="capabilities-grid">
+          <!-- CARD 1 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">🔎</div>
+            <h3>SEO Architecture</h3>
+            <p class="capability-desc"> Enterprise-grade structural SEO systems built for scale. </p>
+            <div class="capability-tags">
+              <span>Technical SEO</span>
+              <span>Site Taxonomy</span>
+              <span>Internal Linking</span>
+              <span>Index Optimization</span>
+            </div>
+          </div>
+          <!-- CARD 2 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">🧠</div>
+            <h3>Content Systems</h3>
+            <p class="capability-desc"> Demand-driven editorial frameworks with velocity modeling. </p>
+            <div class="capability-tags">
+              <span>Content Ops</span>
+              <span>Topic Clusters</span>
+              <span>Demand Modeling</span>
+              <span>Editorial Workflows</span>
+            </div>
+          </div>
+          <!-- CARD 3 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">📊</div>
+            <h3>Data Intelligence</h3>
+            <p class="capability-desc"> Measurable performance frameworks across lifecycle stages. </p>
+            <div class="capability-tags">
+              <span>Analytics</span>
+              <span>Attribution</span>
+              <span>Forecasting</span>
+              <span>Dashboards</span>
+            </div>
+          </div>
+          <!-- CARD 4 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">⚙️</div>
+            <h3>Automation Systems</h3>
+            <p class="capability-desc"> AI-enhanced execution pipelines and operational alignment. </p>
+            <div class="capability-tags">
+              <span>AI Workflows</span>
+              <span>Prompt Systems</span>
+              <span>Process Automation</span>
+              <span>Scaling Loops</span>
+            </div>
+          </div>
+          <!-- CARD 5 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">📈</div>
+            <h3>Growth Strategy</h3>
+            <p class="capability-desc"> Holistic acquisition systems aligned with revenue impact. </p>
+            <div class="capability-tags">
+              <span>Lifecycle Design</span>
+              <span>Conversion Flow</span>
+              <span>Positioning</span>
+              <span>ROI Modeling</span>
+            </div>
+          </div>
+          <!-- CARD 6 -->
+          <div class="capability-card glass">
+            <div class="capability-icon">🌍</div>
+            <h3>International SEO</h3>
+            <p class="capability-desc"> Multi-market scaling frameworks for global brands. </p>
+            <div class="capability-tags">
+              <span>Hreflang</span>
+              <span>Localization</span>
+              <span>Geo-targeting</span>
+              <span>Market Expansion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- THOUGHT LEADERSHIP -->
+    <section id="insights" class="insights-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow small-label center">Insights</span>
+          <h2 class="section-title">Thought Leadership</h2>
+        </div>
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <!-- LEFT ARROW -->
+          <button class="carousel-btn prev" aria-label="Previous"> &#10094; </button>
+          <!-- Viewport Wrapper (Clips Cards Only) -->
+          <div class="carousel-wrapper">
+            <div class="carousel-track">
+              <!-- CARD 1 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Strategy</span>
+                <h3>Enterprise Growth Architecture</h3>
+                <p> Building scalable growth engines requires aligning data, product, marketing and revenue teams into a unified strategic system. Sustainable scale comes from structured experimentation and disciplined execution across business layers. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">6 min read</span>-->
+              </div>
+              <!-- CARD 2 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Execution</span>
+                <h3>Operational Leverage</h3>
+                <p> Growth without operational clarity creates friction. Systems, feedback loops and measurable performance frameworks drive predictable outcomes across enterprise environments. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">5 min read</span>-->
+              </div>
+              <!-- CARD 3 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Analytics</span>
+                <h3>Decision Intelligence</h3>
+                <p> Advanced analytics transforms data into action. Strategic instrumentation and predictive modeling empower leadership to make informed, high-impact decisions. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">6 min read</span>-->
+              </div>
+              <!-- CARD 4 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Growth</span>
+                <h3>Performance Architecture</h3>
+                <p> Sustainable growth emerges from cohesive alignment between acquisition, retention and monetization frameworks. Architecture determines velocity. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">6 min read</span>-->
+              </div>
+              <!-- CARD 5 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Product</span>
+                <h3>Scalable Systems</h3>
+                <p> Product-market fit must evolve. Continuous optimization, experimentation pipelines and integrated feedback loops ensure compounding growth over time. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">6 min read</span>-->
+              </div>
+              <!-- CARD 6 -->
+              <div class="thought-card">
+                <span class="tag card-tag">Leadership</span>
+                <h3>Strategic Execution</h3>
+                <p> Vision without execution is noise. Aligning stakeholders, defining metrics and maintaining velocity creates transformational enterprise outcomes. </p>
+                <div class="card-divider"></div>
+                <!--<span class="card-meta">6 min read</span>-->
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT ARROW -->
+          <button class="carousel-btn next" aria-label="Next"> &#10095; </button>
+        </div>
+      </div>
+    </section>
+    <!-- FINAL CTA -->
+    <section class="section" id="contact">
+      <div class="container contact-container">
+        <div class="small-label center">Connect</div>
+        <h2 class="contact-title gradient-title">
+          <span style="background: linear-gradient(90deg, #fff, #fff); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;">Let’s Build</span>
+          <br> Your Growth Engine
+        </h2>
+        <h3 class="contact-subtitle"> Structured systems. Scalable execution. Measurable outcomes. </h3>
+        <p class="contact-description"> Whether you're scaling an enterprise SEO operation or building a high-performance organic acquisition engine, I design systems that create sustainable competitive advantage through structure, automation, and data intelligence. </p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/xtsimpogiannis/" target="_blank" class="contact-link">
+            <div class="contact-icon">in</div>
+            <span>LinkedIn</span>
+          </a>
+          <!--<a href="mailto:your@email.com" class="contact-link">
+            <div class="contact-icon">✉</div>
+            <span>your@email.com</span>
+          </a>-->
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <!-- Left -->
+        <div class="footer-left">
+          <!--<div class="footer-logo"><span style="color:#fff;">X</span>T</div>-->
+          <div class="logo">
+            <span style="color:#fff;">X</span>T
+          </div>
+          <div class="footer-name">Xenofon Tsimpogiannis</div>
+        </div>
+        <!-- Center -->
+        <div class="footer-center"> © 2026 All rights reserved. </div>
+        <!-- Right -->
+        <div class="footer-right">
+          <a href="https://www.linkedin.com/in/xtsimpogiannis/" target="_blank" class="footer-btn"> View My CV </a>
+        </div>
+      </div>
     </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/mesh.js"></script>
   </body>
 </html>
