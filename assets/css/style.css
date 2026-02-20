@@ -52,14 +52,22 @@ header,
 .nav-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	height: 80px;
 }
 
 .logo {
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 18px;
-	letter-spacing: -0.3px;
+	letter-spacing: 2px;
+	color: var(--accent);
+	margin-right:2%;
+}
+
+.logo-mobile {
+	display:none;
+	color: var(--accent);
+	letter-spacing: 0.05rem;
 }
 
 .nav-links {
@@ -89,7 +97,17 @@ header,
 		right: 0;
 	}
 
-
+	.nav-container {
+		justify-content: space-between;
+	}
+	
+	.logo-mobile {
+		display:block;
+	}
+	
+	.logo {
+		display:none;
+	}
 }
 
 .nav-links a {
@@ -242,12 +260,6 @@ p {
 	margin-left: 25px;
 	text-decoration: none;
 	font-weight: 500;
-}
-
-.logo {
-	color: var(--accent);
-	font-weight: 700;
-	letter-spacing: 2px;
 }
 
 /* ======= HERO ======= */
@@ -1352,6 +1364,10 @@ canvas {
 	display: flex;
 	align-items: center;
 	gap: 16px;
+}
+
+.footer-left .logo {
+	margin-right:0px;
 }
 
 .footer-logo {
