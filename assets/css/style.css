@@ -16,6 +16,12 @@
 	--container-width: 1300px;
 }
 
+@media (max-width: 900px) {
+:root {	
+	--section-spacing: 80px;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -968,7 +974,8 @@ canvas {
 
 .carousel-btn:hover {
 	background: rgba(78, 163, 255, 0.15);
-	border-color: rgba(78, 163, 255, 0.5);
+	border-color:#00e0c6;
+	/*border-color: rgba(78, 163, 255, 0.5);*/
 	box-shadow: 0 0 20px rgba(78, 163, 255, 0.3);
 	transform: translateY(-50%) scale(1.08);
 }
@@ -1251,6 +1258,9 @@ canvas {
 	.small-label {
     text-align: center;
 }
+	.manifesto-content {
+    margin-top: 0px;
+	}
 }
 
 .manifesto-section::before {
