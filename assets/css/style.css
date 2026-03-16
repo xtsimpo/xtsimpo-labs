@@ -103,6 +103,8 @@ header,
 	
 	.logo-mobile {
 		display:block;
+		font-weight:700px;
+		letter-spacing:2px;
 	}
 	
 	.logo {
